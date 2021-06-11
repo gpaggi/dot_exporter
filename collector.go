@@ -19,11 +19,6 @@ type Collector struct {
 	activeValidatorsCount int
 }
 
-type metric struct {
-	validator string
-	value     float64
-}
-
 func (c *Collector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- c.activeValidators
 }
