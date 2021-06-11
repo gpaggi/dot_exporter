@@ -7,6 +7,7 @@ A Prometheus exporter to export metrics related to Substrate based Nodes.
 * [Requirements](#requirements)
 * [How To Build](#how-to-build)
 * [Known Limitations](#known-limitations)
+* [Versioning](#Versioning)
 
 
 ## Intro
@@ -56,4 +57,8 @@ make build
 
 ## Known Limitations
 * Calls to gsrpc should be passed a context with deadline to avoid the whole exporter hanging in case of issues while calling
-* In this implementation, and following development's guidelines, the metrics collection scheduling is left to Prometheus. In future implementations, and when handling large input list of validators, it is recommended to collect the metrics asynchronously.
+* In this implementation, and following Prometheus development's guidelines, the metrics collection scheduling is left to Prometheus. In future implementations, and when handling large input list of validators, it is recommended to collect the metrics asynchronously.
+
+## Versioning
+
+For the versions available see git history of the VERSION file
