@@ -7,7 +7,7 @@ build:
 	@CGO_ENABLED=0 go build -v -ldflags "-X github.com/gpaggi/dot_monitor/version.Version=$(VERSION) -s -w" -o dot_monitor .
 
 clean:
-	@rm logstats
+	@rm dot_monitor
 
 build-docker:
 	@docker build --build-arg VERSION=$(VERSION) -t $(IMG_NAME):$(VERSION) .
